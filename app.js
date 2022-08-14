@@ -19,11 +19,48 @@
 
 
 
+// $(function(){
+//   $(".box1").on("click",function(){//クリックすると
+//     $(".box1").addClass("box1-ext");//処理起動
+//   });
+//   $('.box1').mouseout(function(){//マウスを離すと
+//     $('.box1').removeClass("box1-ext");//処理解除
+//   });
+// });
+
+
+
+// $(function(){
+//   $(".bg1").on("click",function(){
+//     $(".bg1").slideUp();
+//   });
+
+//   $('.bg2').on('click', function(){
+//     $('.bg2').slideUp();
+//   });
+
+//   $('.bg3').on('click', function(){
+//     $('.bg3').slideUp();
+//   });
+
+//   $('.bg4').on('click', function(){
+//     $('.bg4').slideUp();
+//   });
+// });
+//↓変更後
+
+
+// $(function(){
+//   $('.box1').on('click', function(){
+//     $(this).slideUp();
+//   });
+// });
+//box1クラスがクリックされたとき、
+//this（クリックされた要素）のみslideUpさせる
+
+
 $(function(){
-  $(".box1").on("click",function(){//クリックすると
-    $(".box1").addClass("box1-ext");//処理起動
+  $('button').on('click', function(){
+    $('ul').children().css('color','red');
   });
-  $('.box1').mouseout(function(){//マウスを離すと
-    $('.box1').removeClass("box1-ext");//処理解除
-  });
-});
+});//HTML要素(ここではul)直下のすべての子要素
